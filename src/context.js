@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const AppContext = React.createContext();
 
@@ -47,8 +47,6 @@ const AppProvider = ({ children }) => {
     }
     setBoard(boardCopy);
     switchNextPlayer();
-
-    console.log(boardCopy);
   };
 
   const switchNextPlayer = () => {
@@ -62,9 +60,13 @@ const AppProvider = ({ children }) => {
 
   const displayWinner = () => {
     if (winner) {
-      setTimeout(() => alert("Congrats " + winner), 100);
+      alert("Congrats: " + winner);
     }
   };
+
+  useEffect(() => {
+    displayWinner();
+  }, [checkWinner(board)]);
 
   return (
     <AppContext.Provider
