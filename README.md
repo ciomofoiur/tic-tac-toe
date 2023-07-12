@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+- Personal project consisting of a tic-tac-toe game made in React JS
+- Project focused on functionality, not on design
+- Used React functional components
+- Used React Hooks and Context API
+
 ## Available Scripts
 
 In the project directory, you can run:
